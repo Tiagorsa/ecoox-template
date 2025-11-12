@@ -6,7 +6,8 @@ Serviço que:
 2) Cria contato via **createContact** (se 404)  
 3) Envia **template**  
 
-Todos os POSTs externos recebem **Authorization: Bearer <TOKEN>** 
+Todos os POSTs externos recebem 
+**Authorization: Bearer <TOKEN>** 
 vindo **do mesmo header** da chamada ao nosso endpoint.
 
 ## Endpoint
