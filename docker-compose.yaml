@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  template-sender:
+    build: .
+    container_name: template-sender
+    ports:
+      - "8000:8000"
+    environment:
+      EFIX_BASE_HOST: "${EFIX_BASE_HOST:-api4.ecosim.com.br}"
+      EFIX_HTTP_TIMEOUT: "${EFIX_HTTP_TIMEOUT:-15}"
+    restart: unless-stopped
