@@ -1,12 +1,3 @@
-# Template Sender and create contact (FastAPI)
-
-Serviço que:
-1) Verifica contato via **showcontact**  
-2) Cria contato via **createContact** (se 404)  
-3) Envia **template**  
-
-Todos os POSTs externos recebem **Authorization: Bearer <TOKEN>** vindo **do mesmo header** da chamada ao nosso endpoint.
-
 ```markdown
 # Template Sender and create contact (FastAPI)
 
@@ -15,7 +6,8 @@ Serviço que:
 2) Cria contato via **createContact** (se 404)  
 3) Envia **template**  
 
-Todos os POSTs externos recebem **Authorization: Bearer <TOKEN>** vindo **do mesmo header** da chamada ao nosso endpoint.
+Todos os POSTs externos recebem **Authorization: Bearer <TOKEN>** 
+vindo **do mesmo header** da chamada ao nosso endpoint.
 
 ## Endpoint
 
