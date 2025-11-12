@@ -8,8 +8,7 @@ from datetime import datetime
 # =========================
 # Configurações Fixas
 # =========================
-BASE_URL = os.getenv("BASE_URL", "https://api4.ecosim.com.br")
-TEMPLATE_TOKEN = os.getenv("TEMPLATE_TOKEN", "7e862d5e-87a3-4e3c-80e7-6c26301f11d7")
+BASE_URL = os.getenv("BASE_URL", "https://chatapi.efixtelecom.com.br")
 TIMEOUT_SECS = float(os.getenv("HTTP_TIMEOUT", "15"))
 
 # =========================
@@ -67,7 +66,7 @@ def safe_json(resp: httpx.Response) -> Any:
 # =========================
 app = FastAPI(
     title="Template Sender and create contact",
-    version="1.0.0",
+    version="1.0.1",
     description="Verifica contato, cria se necessário e envia template via API externa."
 )
 
@@ -99,7 +98,7 @@ async def send_template(
     # URLs externas
     url_show = f"{BASE_URL}/v2/api/external/{canal_token}/showcontact"
     url_create = f"{BASE_URL}/v2/api/external/{canal_token}/createContact"
-    url_template = f"{BASE_URL}/v2/api/external/{TEMPLATE_TOKEN}/template"
+    url_template = f"{BASE_URL}/v2/api/external/{canal_token}/template"
 
     steps = []
 
